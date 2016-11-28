@@ -45,6 +45,8 @@ var Api = (function() {
     http.onreadystatechange = function() {
       if (http.readyState === 4 && http.status === 200 && http.responseText) {
         Api.setResponsePayload(http.responseText);
+        var jsonRsp = JSON.parse(http.responseText);
+        text_to_speech(jsonRsp.output.text[0]);
       }
     };
 

@@ -24,6 +24,12 @@
             placeholder="Type something" type="text"
             onkeydown="ConversationPanel.inputKeyDown(event, this)">
         </label>
+<!--        <button id="speak-btn">Speak</button>-->
+        <audio autoPlay="true" id="audio"
+               className="audio" 
+               controls="controls">
+              Your browser does not support the audio element.
+        </audio>
       </div>
     </div>
     <div id="payload-column" class="fixed-column content-column">
@@ -35,10 +41,17 @@
     </div>
   </div>
 
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="js/jquery-ajax-native.js"></script>
+  
   <script src="js/common.js"></script>
   <script src="js/api.js"></script>
   <script src="js/conversation.js"></script>
   <script src="js/payload.js"></script>
   <script src="js/global.js"></script>
+  <script src="js/tts-custom.js"></script>
 </body>
 </html>
